@@ -1,0 +1,58 @@
+.card {
+	position: relative;
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 16px;
+	width: 25%;
+}
+.wrap-card-options {
+	position: absolute;
+	top: -16px;
+	left: -16px;
+	opacity: 0;
+	transition: opacity 0.2s linear;
+}
+.card:hover .wrap-card-options {
+	opacity: 1;
+}
+.card-options {
+	box-sizing: border-box;
+	width: 32px;
+	height: 32px;
+	text-indent: -9999px;
+	background-size: 32px 32px
+	overflow: hidden;
+	border-radius: 50%;
+	border: 2px solid rgba(0, 0, 0, 0.5);
+	display: inline-block;
+	background-color: #fff;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+}
+.card-options.isActive {
+	border-width: 4px;
+}
+.card_delete {
+	background-image: url('../../img/delete.svg');
+	margin-right: 15px;
+}
+.card_edit {
+	background-image: url('../../img/edit.svg');
+}
+.card-content[contenteditable="true"] {
+	outline: 2px dashed rgba(0, 0, 0, 0.5);
+}
+[data-color="first"] {
+	background-color: #45aaee; /* Azul */
+}
+[data-color="second"] {
+	background-color: #ff1010; /* Vermelho */
+}
+[data-color="third"] {
+	background-color: #76ef40; /* Verde */
+}
+[data-color="fourth"] {
+	background-color: #ebef40; /* Amarelo */
+}

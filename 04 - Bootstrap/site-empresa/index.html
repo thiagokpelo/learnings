@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Loja Virtual</title>
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<style>
+		main { padding-top: 50px; }
+		.fullscreen{width: 100%;}
+		footer{background-color: #333; color: #fff; padding: 20px 0px; text-align: center; }
+	</style>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">Marca</a>
+				<button type="button" class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse">Menu</button>
+			</div>
+
+			<div class="collapse navbar-collapse">
+				<ul class="navbar-nav nav">
+					<li><a href="#">Novidades</a></li>
+					<li><a href="#">Mais vendidos</a></li>
+					<li clas="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+					Camisetas
+					<span class="caret"> </span>
+					</a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Masculinas</a></li>
+							<li><a href="#">Femininas</a></li>
+							<li><a href="#">Infantil</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form class="navbar-form navbar-right">
+					<div>
+						<input type="text" class="form-control" placeholder="Digite a sua busca" />
+						<button type="button" class="btn btn-default">Buscar</button>
+					</div>
+				</form>
+			</div>
+		</nav>
+	</header>
+
+	
+
+	<main>
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+		    <div class="carousel-inner" role="listbox">
+		        <div class="item active">
+		            <img src="img/banner1.jpg" alt="Moda" class="fullscreen"/>
+		        </div>
+		        <div class="item">
+		            <img src="img/banner2.jpg" alt="Moda Infantil" class="fullscreen"/>
+		        </div>
+		    </div>
+
+		    <a href="#carousel" class="left carousel-control" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+	    	<a href="#carousel" class="right carousel-control" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+		</div>
+		
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12 col-md-3">
+					<div>
+					    <h3 class="text-center">Categorias</h3>
+					</div>
+					<ul class="list-group">
+						<li class="list-group-item"><a href="#">Camisetas Masculinas</a></li>
+						<li class="list-group-item"><a href="#">Camisetas Femininas</a></li>
+						<li class="list-group-item"><a href="#">Roupas de verão</a></li>
+						<li class="list-group-item"><a href="#">Roupas de inverno</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-md-9">
+					<h3 class="text-center">Novidades</h3>
+
+					<div class="thumbnail text-center col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+						<figure>
+							<img src="img/camisa-azul.png" alt="Camisa azul importada">
+							<figcaption>
+								<h4>Camisa Azul Importada</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+						<p>R$ 190,00</p>
+						<a href="#" class="btn btn-primary">Comprar</a>
+					</div>
+
+					<div class="thumbnail text-center col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+						<figure>
+							<img src="img/camisa-rosa.png" alt="Camisa rosa importada">
+							<figcaption>
+								<h4>Camisa Rosa Importada</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+						<p>R$ 210,00</p>
+						<a href="#" class="btn btn-primary">Comprar</a>
+					</div>
+
+					<div class="thumbnail text-center col-md-4 wow fadeInUp" data-wow-delay="0.5s">
+						<figure>
+							<img src="img/camisa-azul.png" alt="Camisa azul nacional">
+							<figcaption>
+								<h4>Camisa Azul Nacional</h4>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+							</figcaption>
+						</figure>
+						<p>R$ 90,00</p>
+						<a href="#" class="btn btn-primary ">Comprar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<p>
+			Rua Mantena,222<br>
+			Tel. (12) 3456-7890
+		</p>
+	</footer>
+
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/wow.min.js"></script>
+	<script>
+		$(function(){
+			new WOW().init();
+		});
+	</script>
+</body>

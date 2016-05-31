@@ -1,0 +1,13 @@
+// Variaveis usadas no meu Sass
+// 
+// Outras funções de cores
+// adjust-hue();
+// saturate(); 
+// complement();
+$cor-padrao: darken(#c24e4b, 20);
+$cor-auxiliar: lighten(#1e2c35, 0%);
+$cor-branca: #fff;
+$raio: 0.3em;
+$ponto-de-quebra: 980px;
+$mq-mobile: "(max-width: 980px)";
+$valor-fonte-padrao: 16px;

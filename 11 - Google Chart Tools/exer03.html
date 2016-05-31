@@ -1,0 +1,59 @@
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    	google.load("visualization", "1", {"packages" : ["corechart"]});
+    	google.setOnLoadCallback(desenhaGrafico);
+
+    	function desenhaGrafico() {
+
+    		var data = new google.visualization.DataTable();
+
+    		data.addColumn("date", "Dia");
+    		data.addColumn("number", "Conta Corrente");
+            data.addColumn("number", "Conta Investimento");
+
+    		data.addRows(6);
+
+    		// data.setValue(LINHA, COLUNA, VALOR);
+
+    		data.setValue(0, 0, new Date(2011, 01, 07));
+    		data.setValue(0, 1, 1023.29);
+            date.setValue(0, 2, 410.50);
+
+            data.setValue(1, 0, new Date(2011, 01, 08));
+            data.setValue(1, 1, 900.29);
+            date.setValue(1, 2, 100.50);
+
+            data.setValue(2, 0, new Date(2011, 01, 09));
+            data.setValue(2, 1, 300.29);
+            date.setValue(2, 2, 50.50);
+
+            data.setValue(3, 0, new Date(2011, 01, 10));
+            data.setValue(3, 1, 2506.29);
+            date.setValue(3, 2, 800.50);
+
+            data.setValue(4, 0, new Date(2011, 01, 11));
+            data.setValue(4, 1, 2900.29);
+            date.setValue(4, 2, 890.50);
+
+            data.setValue(5, 0, new Date(2011, 01, 12));
+            data.setValue(5, 1, 8900.29);
+            date.setValue(5, 2, 2300.50);
+
+    		var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+    		chart.draw(data, {width: 700, height: 340, title: 'Minhas Contas'});
+    	}
+    </script>
+    </head>
+    <body>
+      <h1>Saldo das contas</h1>
+
+      <div id="chart_div"></div>
+
+    </body>
+    </html>

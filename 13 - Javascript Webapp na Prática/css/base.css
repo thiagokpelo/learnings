@@ -1,0 +1,13 @@
+.container {
+	padding: 0 10%;
+}
+
+section {
+	padding-top: 100px;
+}
+
+.error {
+	display: block;
+	color: #ff1010;
+	text-align: center;
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Salário Mensal</title>
+</head>
+<body>
+	<script>
+
+	var salarioMensal = 500;
+
+	//se o salário mensal for maior que 0 e menor que 1000, imprime "o bonus é 0%" no console
+	if (salarioMensal <= 0) {
+		console.log("O bônus é de 0%");
+
+	//se o salário mensal for maior que 0 e menor que 1000, imprime "o bonus é 5%" no console
+	} else if (salarioMensal > 0 && salarioMensal < 1000) {
+		console.log("O bônus é de 5%");
+
+	// se não cair na condição anterior e o salário mensal for menor que 2000, imprime "o bonus é 10%" no console
+	} else if (salarioMensal >= 1000 && salarioMensal < 2000) {
+		console.log("O bônus é de 10%");
+
+	// se não cair na condição anterior, imprime "o bonus é 15%" no console
+	} else {
+		console.log("O bônus é de 15%");
+	};
+
+	</script>
+</body>
+</html>

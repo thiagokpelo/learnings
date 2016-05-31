@@ -1,0 +1,70 @@
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+    	google.load("visualization", "1", {"packages" : ["corechart"]});
+    	google.setOnLoadCallback(desenhaGrafico);
+
+    	function desenhaGrafico() {
+
+    		var data = new google.visualization.DataTable();
+
+    		data.addColumn("string", "Mês");
+    		data.addColumn("number", "Valor da Gasolina R$");
+
+    		data.addRows(12);
+
+    		// data.setValue(LINHA, COLUNA, VALOR);
+
+    		data.setValue(0, 0, "Janeiro");
+    		data.setValue(0, 1, 1.345);
+
+    		data.setValue(1, 0, "Fevereiro");
+    		data.setValue(1, 1, 1.387);
+
+    		data.setValue(2, 0, "Março");
+    		data.setValue(2, 1, 1.444);
+
+    		data.setValue(3, 0, "Abril");
+    		data.setValue(3, 1, 1.282);
+
+    		data.setValue(4, 0, "Maio");
+    		data.setValue(4, 1, 1.321);
+
+            data.setValue(5, 0, "Junho");
+            data.setValue(5, 1, 1.478);
+
+            data.setValue(6, 0, "Julho");
+            data.setValue(6, 1, 1.567);
+
+            data.setValue(7, 0, "Agosto");
+            data.setValue(7, 1, 1.466);
+
+            data.setValue(8, 0, "Setembro");
+            data.setValue(8, 1, 1.399);
+
+            data.setValue(9, 0, "Outubro");
+            data.setValue(9, 1, 1.412);
+
+            data.setValue(10, 0, "Novembro");
+            data.setValue(10, 1, 1.415);
+
+            data.setValue(11, 0, "Dezembro");
+            data.setValue(11, 1, 1.437);
+
+    		var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+
+    		chart.draw(data, {width: 900, height: 240, title: 'Variação da gasolina no ano', colors: ['green']});
+    	}
+    </script>
+    </head>
+    <body>
+      <h1>Gastos por mês</h1>
+
+      <div id="chart_div"></div>
+
+    </body>
+    </html>
