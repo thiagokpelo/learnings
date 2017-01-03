@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Aprendendo IndexedDB</title>
+</head>
+<body>
+	
+	<script>
+		
+		var openResquest = window.indexedDB.open('aluraframe', 1),
+			connection;
+
+		openResquest.onupgradeneeded = (e) => {
+			console.log('Cria ou altera um banco ja existente');
+		};
+
+		openResquest.onsuccess = (e) => {
+			console.log('Conexão obtida com sucesso');
+			connection = e.target.result;
+		};
+
+		openResquest.onerror =  (e) => {
+			console.log(e.target.error);
+		};
+
+		
+
+	</script>
+</body>
+</html>
