@@ -1,30 +1,23 @@
 <template lang="html">
-  <button :type="tipo" class="botao botao-perigo">{{ rotulo }}</button>
+  <button :type="tipo" class="botao" v-bind:class="botaoClass" >{{ rotulo }}</button>
 </template>
 
 <script>
 export default {
 
-    props: ['tipo', 'rotulo']
+    props: ['tipo', 'rotulo', 'estilo'],
+
+    computed: {
+
+      botaoClass: function () {
+        if (this.estilo == 'perigo') return 'botao-perigo';
+        
+        return 'botao-padrao';
+      }
+    }
 }
 </script>
 
-<style lang="css"scoped>
-  .botao {
-    display: inline-block;
-    padding: 10px;
-    border-radius: 3px;
-    margin: 10px;
-    font-size: 1.2em;
-  }
-
-  .botao-perigo {
-    background: firebrick;
-    color: white;
-  }
-
-  .botao-padrao {
-    background: darkcyan;
-    color: white;
-  }
+<style lang="scss" scoped>
+  @import './Botao';
 </style>
