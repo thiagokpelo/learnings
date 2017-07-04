@@ -34,7 +34,7 @@ export class FormularioAutor extends Component {
           new TratadorErros().publicaErros(erro.responseJSON)
         }
       },
-      beforeSend: () => PubSub.pulish('limpa-erros', {})
+      beforeSend: () => PubSub.publish('limpa-erros', {})
     })
   }
 
@@ -55,18 +55,21 @@ export class FormularioAutor extends Component {
       <div className="pure-form pure-form-aligned">
         <form className="pure-form pure-form-aligned" onSubmit={this.enviaForm} method="post">
           <InputCustomizado name="nome"
+                            id="nome"
                             type="text"
                             label="Nome:"
                             value={this.state.nome}
                             onChange={this.setNome} />
 
           <InputCustomizado name="email"
+                            id="email"
                             type="email"
                             label="E-mail:"
                             value={this.state.email}
                             onChange={this.setEmail} />
 
           <InputCustomizado name="senha"
+                            id="senha"
                             type="password"
                             label="Senha:"
                             value={this.state.senha}
@@ -108,7 +111,7 @@ export class TabelaAutores extends Component {
   }
 }
 
-export default class AutorBox extends Component {
+export default class AutorAdmin extends Component {
 
   constructor() {
     super()
@@ -128,8 +131,13 @@ export default class AutorBox extends Component {
   render() {
     return (
       <div>
-        <FormularioAutor/>
-        <TabelaAutores lista={this.state.lista}/>
+        <div className="header">
+          <h1>Cadastro de Autor</h1>
+        </div>
+        <div className="content" id="content">
+          <FormularioAutor/>
+          <TabelaAutores lista={this.state.lista}/>
+        </div>
       </div>
     )
   }

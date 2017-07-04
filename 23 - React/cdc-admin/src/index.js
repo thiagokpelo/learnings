@@ -1,21 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import createBrowserHistory from 'history/createBrowserHistory'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom'
 
 import App from './App';
-import AutorBox from './Autor'
-import registerServiceWorker from './registerServiceWorker';
-import './index.css';
+import AutorAdmin from './Autor'
+import LivroAdmin from './Livro'
+import Home from './Home'
+import registerServiceWorker from './registerServiceWorker'
+import './index.css'
 
 ReactDOM.render((
-  <Router history={createBrowserHistory}>
-    <div>
-      <Route path="/" component={App} />
-      <Route path="/autor" component={AutorBox} />
-      <Route path="/livro" />
-    </div>
+  <Router>
+    <App>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route path="/autor" component={AutorAdmin} />
+        <Route path="/livro" component={LivroAdmin}/>
+      </Switch>
+    </App>
   </Router>
-), document.getElementById('root'));
+), document.getElementById('root'))
 
-registerServiceWorker();
+registerServiceWorker()
