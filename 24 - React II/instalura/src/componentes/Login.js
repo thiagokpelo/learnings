@@ -2,9 +2,17 @@ import React, { Component } from 'react';
 
 export default class Login extends Component {
 
-    constructor() {
-        super();
-        this.state = { msg: '' };
+    constructor(props) {
+        super(props);
+        this.getParamsURL = this.getParamsURL.bind(this);
+        this.state = { msg: this.getParamsURL('msg') };
+    }
+
+    getParamsURL(key) {
+        const search = this.props.location.search;
+        const params = new URLSearchParams(search);
+        
+        return params.get(key);
     }
 
     envia(event) {
